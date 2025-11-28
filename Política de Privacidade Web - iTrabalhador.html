@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - iTrabalhador</title>
+    <style>
+        :root {
+            --primary-color: #0d47a1;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+            --container-bg: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: var(--container-bg);
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            font-size: 1.4em;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+                padding: 20px;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Política de Privacidade</h1>
+    <p><strong>Aplicativo:</strong> iTrabalhador</p>
+    <p><strong>Última atualização:</strong> 28 de Novembro de 2025</p>
+
+    <h2>1. Introdução</h2>
+    <p>Esta Política de Privacidade descreve como o iTrabalhador trata dados inseridos pelo usuário. O aplicativo foi desenvolvido para funcionar localmente, priorizando a privacidade e a segurança, sem criar contas obrigatórias ou enviar informações para servidores próprios sem o consentimento do usuário.</p>
+
+    <h2>2. Dados Coletados</h2>
+    <p>O aplicativo coleta e armazena os seguintes dados, de forma direta ou indireta, para viabilizar suas funcionalidades:</p>
+    <ul>
+        <li><strong>Dados de Simulações:</strong> Valores de salário (bruto/líquido), benefícios, dependentes, custos, datas de admissão/afastamento e informações relacionadas a cálculos trabalhistas (férias, 13º, rescisão, horas extras). Estes dados são gravados localmente via <em>SharedPreferences</em> apenas se o usuário optar por salvá-los.</li>
+        <li><strong>Preferências e Configurações:</strong> Escolhas de tema (claro/escuro), modo avançado e tabelas personalizadas de INSS e IRRF.</li>
+        <li><strong>Registro de Ponto:</strong> Horários de entrada/saída, tipos de marcação, notas, configurações de jornada, justificativas e banco de horas. Estes dados são armazenados em banco de dados local (<em>Hive</em>).</li>
+        <li><strong>Feriados Locais:</strong> Datas comemorativas criadas manualmente pelo usuário.</li>
+        <li><strong>Documentos PDF:</strong> Relatórios gerados a partir dos dados acima. O processamento é local.</li>
+    </ul>
+    <p><strong>Nota sobre Dados Sensíveis:</strong> O app não solicita identificadores oficiais (CPF, RG) ou endereço. Informações financeiras e de rotina de trabalho permanecem restritas ao armazenamento local do dispositivo.</p>
+
+    <h2>3. Finalidade do Uso dos Dados</h2>
+    <p>Os dados são utilizados estritamente para:</p>
+    <ul>
+        <li>Realizar cálculos trabalhistas e simulações financeiras.</li>
+        <li>Gerenciar o controle de ponto eletrônico pessoal.</li>
+        <li>Personalizar a experiência de uso (temas e alíquotas).</li>
+        <li>Gerar relatórios em PDF para uso pessoal.</li>
+    </ul>
+
+    <h2>4. Compartilhamento e Terceiros</h2>
+    <p>O iTrabalhador não realiza envio automático de dados para servidores externos. Não há integração com serviços de análise, publicidade (AdMob) ou bancos de dados em nuvem (Firebase Cloud Firestore) para sincronização automática.</p>
+    <p>O compartilhamento de dados ocorre <strong>apenas</strong> se o usuário decidir exportar um relatório (PDF) e enviá-lo manualmente através de outros aplicativos instalados no dispositivo (e-mail, WhatsApp, Telegram, etc.).</p>
+
+    <h2>5. Armazenamento e Segurança</h2>
+    <p>Todos os dados residem no armazenamento interno do dispositivo do usuário. O aplicativo utiliza tecnologias padrão de persistência local (<em>SharedPreferences</em> e <em>Hive</em>).</p>
+    <p><strong>Atenção:</strong> Estes métodos de armazenamento padrão não aplicam criptografia forte por padrão. Recomenda-se que o usuário mantenha seu dispositivo protegido por senha, PIN ou biometria para garantir a segurança das informações em caso de perda ou furto do aparelho.</p>
+
+    <h2>6. Controle e Exclusão de Dados</h2>
+    <p>O usuário possui total controle sobre seus dados:</p>
+    <ul>
+        <li><strong>Edição e Exclusão:</strong> É possível editar ou remover simulações, registros de ponto e feriados através da interface do aplicativo.</li>
+        <li><strong>Reset:</strong> O usuário pode restaurar as tabelas tributárias aos valores padrão.</li>
+        <li><strong>Exclusão Total:</strong> A desinstalação do aplicativo remove permanentemente todos os dados armazenados localmente pelo iTrabalhador.</li>
+    </ul>
+
+    <h2>7. Permissões do Dispositivo</h2>
+    <p>O aplicativo não solicita permissões sensíveis (como Câmera, Localização ou Contatos). A funcionalidade de gerar e compartilhar PDF utiliza os mecanismos nativos de "Intenção de Compartilhamento" do sistema operacional Android, não exigindo permissões especiais de armazenamento no manifesto para as versões mais recentes do Android.</p>
+
+    <h2>8. Crianças e Menores de Idade</h2>
+    <p>O aplicativo não é direcionado a crianças e não coleta intencionalmente dados de menores. Recomendamos que usuários menores de idade utilizem a ferramenta sob supervisão de um responsável.</p>
+
+    <h2>9. Contato</h2>
+    <p>Em caso de dúvidas sobre esta política ou sobre o tratamento de dados no aplicativo, entre em contato através dos canais de suporte informados na página do aplicativo na loja.</p>
+
+    <div class="footer">
+        &copy; 2025 iTrabalhador. Todos os direitos reservados.
+    </div>
+</div>
+
+</body>
+</html>
